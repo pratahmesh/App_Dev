@@ -2,7 +2,7 @@
 
 ## 🚀 Project Overview
 
-Welcome to an exciting React Native app that packs a punch with features like data fetching, a fully functional login endpoint, and a sleek UI/UX experience. This project is organized into two main folders: `backend` and `navigation`. The `backend` folder hosts `app.js` for the Node.js server and `db.js` for the MongoDB connection string. Meanwhile, the `navigation` folder contains the thrilling React Native codebase.
+Welcome to an exciting React Native app that showcases features like data fetching, a fully functional login endpoint, and a sleek UI/UX experience. This project is organized into two main folders: `backend` and `navigation`. The `backend` folder hosts `app.js` for the Node.js server and `db.js` for the MongoDB connection string. Meanwhile, the `navigation` folder contains the thrilling React Native codebase.
 
 ## 🌟 Features
 
@@ -16,27 +16,27 @@ App_Dev
 │
 ├── backend/
 │   ├── app.js
-│   ├── db.js
+│   └── db.js
 │
-├── navigation/
-│   ├── App.tsx
-│   ├── index.js
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── src/
-│     ├── navigators/
-│     │   ├──TabNavigator.tsx
-│     └──screens/
-│         ├── CartScreen.tsx
-│         ├── DetailsScreen.tsx
-│         ├── Favourites.tsx
-│         ├── HomeScreen.tsx
-│         ├── OrderHistoryScreen.tsx
-│         ├── PaymentScreen.tsx
-│         ├── mini/
-│             ├── buy.tsx
-│             ├── Recent.jsx
-│             ├── wishlist.tsx
+└── navigation/
+    ├── App.tsx
+    ├── index.js
+    ├── package-lock.json
+    ├── package.json
+    └── src/
+        ├── navigators/
+        │   └──TabNavigator.tsx
+        └──screens/
+           ├── CartScreen.tsx
+           ├── DetailsScreen.tsx
+           ├── Favourites.tsx
+           ├── HomeScreen.tsx
+           ├── OrderHistoryScreen.tsx
+           ├── PaymentScreen.tsx
+           └── mini/
+               ├── buy.tsx
+               ├── Recent.jsx
+               └── wishlist.tsx
 
 ```
 
