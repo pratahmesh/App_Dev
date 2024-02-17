@@ -19,6 +19,10 @@ App_Dev
 │   ├── db.js
 │
 ├── navigation/
+│   ├── App.tsx
+│   ├── index.js
+│   ├── package-lock.json
+│   ├── package.json
 │   ├── src/
 │     ├── navigators/
 │     │   ├──TabNavigator.tsx
@@ -33,11 +37,7 @@ App_Dev
 │             ├── buy.tsx
 │             ├── Recent.jsx
 │             ├── wishlist.tsx
-│
-├── App.tsx
-├── index.js
-├── package-lock.json
-└── package.json
+
 ```
 
 
