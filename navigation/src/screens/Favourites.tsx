@@ -1,40 +1,77 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import LottieView from 'lottie-react-native';
-
+import React,{useState} from 'react';
+import { View, Text, StyleSheet,TextInput,Button, ScrollView } from 'react-native';
+import {createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut} from "firebase/auth";
+import { authentication } from '../../firebase/firebase-config';
 const Favourites = () => {
+
+  const [uemail, setuemail] = useState('');
+  const [email, setemail] = useState('');
+  const [upassword, setuPassword] = useState('');
+  const [password, setPassword] = useState('');
+  const [isRegistered, setIsRegistered] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+  const RegisterUser = () => {
+    try {
+      createUserWithEmailAndPassword(authentication, uemail, upassword);
+      setIsRegistered(true);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  // const SignIn = () => {
+  //   try {
+  //     signInWithEmailAndPassword(authentication, email, password);
+      
+  //     setIsSignedIn(true);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+  const SignIn = () => {
+    signInWithEmailAndPassword(authentication, email, password)
+     .then(() => {
+        setIsSignedIn(true);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const SignOut = () => {
+    try {
+      signOut(authentication);
+    }
+     catch (error) {
+      console.log(error);
+    }
+  }
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Welcome to Favourites Screen!</Text>
-      <Text style={styles.text}>This is the Work at 02.48am</Text>
-      <LottieView
-        source={require('../../assets/Cart.json')}
-        autoPlay
-        loop
-        style={styles.animation}
-      />
+    <ScrollView>
+    <View>
+        <Text style={{marginTop:50,textAlign:'center',backgroundColor:'white',fontSize:35}}>SignUP</Text>
+     <TextInput placeholder="Username" value={uemail} onChangeText={text=>setuemail(text)}/>
+     <TextInput placeholder="Password" value={upassword} secureTextEntry={true} onChangeText={text=>setuPassword(text)}/>
+     <Button title="Register" onPress={RegisterUser} />
+      <Text>{isRegistered ? "User is Registered  " : "User is not Registered"}</Text>
+
+
+
+      <Text style={{marginTop:50,textAlign:'center',backgroundColor:'white',fontSize:35}}>SignIN</Text>
+     <TextInput placeholder="Username" value={email} onChangeText={text=>setemail(text)}/>
+     <TextInput placeholder="Password" value={password} secureTextEntry={true} onChangeText={text=>setPassword(text)}/>
+     {isSignedIn === true ?
+      <Button title="Sign OUT" onPress={SignOut} />
+      :
+      <Button title="Sign IN" onPress={SignIn} />
+
+     }
+      <Text>{isSignedIn ? "User is Signed In  " : "User is not Signed In"}</Text>
     </View>
+  </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#DAA520', // or any color you prefer
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-  animation: {
-    width: 200,
-    height: 200,
-  },
-});
-
 
 
 export default Favourites;
