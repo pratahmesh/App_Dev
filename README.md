@@ -7,9 +7,10 @@ Welcome to an exciting React Native app that showcases features like data fetchi
 ## 🌟 Features
 
 - **Data Fetching**: Effortlessly retrieve and display data.
-- **Login Endpoint**: Seamlessly integrate user authentication.
+- **Login Endpoint**: Seamlessly integrate user authentication using MERN.
 - **Sleek UI/UX**: Elevate the user experience with a modern and intuitive interface.
-- 
+- **Firebase**: Used firebase as login endpoint. 
+- **llm model**: Integrated Api based chat System.
 
 ```plaintext
 App_Dev
@@ -33,6 +34,7 @@ App_Dev
            ├── HomeScreen.tsx
            ├── OrderHistoryScreen.tsx
            ├── PaymentScreen.tsx
+           ├── Main.tsx
            └── mini/
                ├── buy.tsx
                ├── Recent.jsx
