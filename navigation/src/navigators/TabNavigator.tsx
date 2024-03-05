@@ -5,6 +5,7 @@ import HomeScreen from '../screens/HomeScreen'
 import CartScreen from '../screens/CartScreen'
 import Favourites from '../screens/Favourites'
 import OrderHistoryScreen from '../screens/OrderHistoryScreen'
+import Main from '../screens/Main.tsx'
 
 const Tab = createBottomTabNavigator()
 
@@ -15,6 +16,12 @@ const TabNavigator = () => {
 options={{
     tabBarLabel: 'Home',
     tabBarIcon: () => (<Image source={{ uri: 'https://img.icons8.com/ios-filled/50/home.png' }}style={{ width: 30, height: 30 }}/>),
+  }}
+/>
+<Tab.Screen name="Main" component={Main}
+options={{
+    tabBarLabel: 'Main',
+    tabBarIcon: () => (<Image source={{ uri: 'https://img.icons8.com/ios-filled/50/artificial-intelligence.png' }}style={{ width: 30, height: 30 }}/>),
   }}
 />
 <Tab.Screen name="Cart" component={CartScreen} 
