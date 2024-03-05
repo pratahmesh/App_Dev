@@ -2,7 +2,7 @@ import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 
 import React from 'react'
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const genAI = new GoogleGenerativeAI("AIzaSyD_E9AcwluDWiXe19rjmekIlAaJXdDokZk");
+const genAI = new GoogleGenerativeAI("Your Key");
 
 const Main = () => {
     const [input, setInput] = React.useState("");
