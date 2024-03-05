@@ -47,35 +47,11 @@ App_Dev
 
 Before unleashing the power of this app, ensure you have the following:
 
-
-## 🔧 Backend Setup
-
-1. 🚀 Dive into the `backend` folder:
-    ```bash
-    cd backend
-    ```
-
-2. 🌐 Install dependencies:
-    ```bash
-    npm install
-    ```
-
-3. 🔥 Ignite the Node.js server:
-    ```bash
-    node app.js
-    ```
-
-## 💾 Database Connection
-
-1. 🚀 Open MongoDB Compass and connect to your MongoDB server.
-
-2. 🔒 **Critical Step:** Update the MongoDB connection string in `backend/db.js` with your credentials. This is your app's lifeline to the database!
-
 ## 🚀 React Native App Setup
 
-1. 🚀 Head over to the `app` folder:
+1. 🚀 Head over to the `navigation` folder:
     ```bash
-    cd app
+    cd navigation
     ```
 
 2. 🌐 Install dependencies:
@@ -94,6 +70,34 @@ Before unleashing the power of this app, ensure you have the following:
     # or
     npx react-native run-ios      # For iOS
     ```
+
+## 💾 Database Connection
+
+1. 🚀 Open MongoDB Compass and connect to your MongoDB server.
+
+2. 🔒 **Critical Step:** Update the MongoDB connection string in `backend/db.js` with your credentials. This is your app's lifeline to the database!
+
+
+## 🔧 Backend Setup
+
+1. 🚀 Dive into the `backend` folder:
+    ```bash
+    cd backend
+    ```
+
+2. 🌐 Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3. 🔥 Ignite the Node.js server:
+    ```bash
+    node app.js
+    ```
+
+
+
+
 
 ## 📝 Additional Notes
 
