@@ -13,33 +13,34 @@ Welcome to an exciting React Native app that showcases features like data fetchi
 - **llm model**: Integrated Api based chat System.
 
 ```plaintext
-App_Dev
+App_Dev/
 │
 ├── backend/
 │   ├── app.js
 │   └── db.js
 │
-└── navigation/
-    ├── App.tsx
-    ├── index.js
-    ├── package-lock.json
-    ├── package.json
-    └── src/
-        ├── navigators/
-        │   └──TabNavigator.tsx
-        └──screens/
-           ├── CartScreen.tsx
-           ├── DetailsScreen.tsx
-           ├── Favourites.tsx
-           ├── HomeScreen.tsx
-           ├── OrderHistoryScreen.tsx
-           ├── PaymentScreen.tsx
-           ├── Main.tsx
-           └── mini/
-               ├── buy.tsx
-               ├── Recent.jsx
-               └── wishlist.tsx
-
+├── navigation/
+│   ├── App.tsx
+│   ├── index.js
+│   ├── package-lock.json
+│   ├── package.json
+│   └── src/
+│       ├── navigators/
+│       │   └──TabNavigator.tsx
+│       └──screens/
+│          ├── CartScreen.tsx
+│          ├── DetailsScreen.tsx
+│          ├── Favourites.tsx
+│          ├── HomeScreen.tsx
+│          ├── OrderHistoryScreen.tsx
+│          ├── PaymentScreen.tsx
+│          ├── Main.tsx
+│          └── mini/
+│              ├── buy.tsx
+│              ├── Recent.jsx
+│              └── wishlist.tsx
+└── navi/
+    ├── smooth navigation clone of twitter
 ```
 
 
